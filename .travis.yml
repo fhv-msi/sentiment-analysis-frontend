@@ -1,0 +1,11 @@
+# deploy to staging
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: fhv-frontend-staging
+
+# deploy to production
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: fhv-frontend
