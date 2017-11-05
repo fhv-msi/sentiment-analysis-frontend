@@ -6,9 +6,6 @@ jobs:
         provider: heroku
         app: fhv-frontend-staging
         api_key: $HEROKU_API_KEY
-        run:
-          - find . -type f -name "*.js" -exec sed -i 's/{{BACKEND_URL}}/fhv-backend-staging.herokuapp.com/g' {} +
-          - restart
     - stage: test staging
       script:
         - 'curl https://fhv-frontend-staging.herokuapp.com/'
@@ -17,8 +14,5 @@ jobs:
       deploy:
         <<: *heroku
         app: fhv-frontend
-        run:
-          - find . -type f -name "*.js" -exec sed -i 's/{{BACKEND_URL}}/fhv-backend.herokuapp.com/g' {} +
-          - restart
     - stage: test production
       script: 'curl https://fhv-frontend.herokuapp.com/'
