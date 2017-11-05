@@ -11,7 +11,6 @@ jobs:
           - restart
     - stage: test staging
       script:
-        - find . -type f -name "*.js" -exec sed -i 's/{{BACKEND_URL}}/fhv-backend-staging.herokuapp.com/g' {} +
         - 'curl https://fhv-frontend-staging.herokuapp.com/'
     - stage: deploy to production
       script: skip
