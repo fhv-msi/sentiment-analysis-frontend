@@ -19,7 +19,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="analysis.html">FHV</a>
+    <a class="navbar-brand" href="analysis.php">FHV</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -28,7 +28,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Sentiment Analysis">
-                <a class="nav-link" href="analysis.html">
+                <a class="nav-link" href="analysis.php">
                     <i class="fa fa-fw fa-dashboard"></i>
                     <span class="nav-link-text">Sentiment Analysis</span>
                 </a>
@@ -110,7 +110,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="index.html" id="logoutBtn">Logout</a>
+                    <a class="btn btn-primary" href="index.php" id="logoutBtn">Logout</a>
                 </div>
             </div>
         </div>
@@ -123,8 +123,8 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
     <script src="js/sessionStorage.js"></script>
-    <script src="js/history.js"></script>
-    <script src="js/auth.js"></script>
+    <script src="js/history.js" data-backend="<?php echo getenv('BACKEND_URL');"></script>
+    <script src="js/auth.js" data-backend="<?php echo getenv('BACKEND_URL');"></script>
 </div>
 </body>
 

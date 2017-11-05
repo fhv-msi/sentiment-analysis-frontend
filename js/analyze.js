@@ -11,7 +11,7 @@ $(function() {
         e.preventDefault(); // disable the default form submit event
 
         $.ajax({
-            url: "http://{{BACKEND_URL}}/analyze",
+            url: "http://" + $('script[src*=auth]').attr('data-backend') +"/analyze",
             type: "POST",
             data: {
                 text: $('#analyzeText').val(),

@@ -3,14 +3,14 @@ $(function() {
         e.preventDefault(); // disable the default form submit even
 
         $.ajax({
-            url: "https://{{BACKEND_URL}}/login",
+            url: "https://" + $('script[src*=auth]').attr('data-backend') +"/login",
             type: "POST",
             data: {
                 email: $('#email').val()
             },
             success: function (response) {
                 write('token', response);
-                window.location.replace("analysis.html");
+                window.location.replace("analysis.php");
             },
             error: function (response) {
                 alert('error during login, please try again');
@@ -24,7 +24,7 @@ $(function() {
         e.preventDefault(); // disable the default form submit even
 
         $.ajax({
-            url: "http://{{BACKEND_URL}}/logout",
+            url: "http://" + $('script[src*=auth]').attr('data-backend') +"/logout",
             type: "POST",
             data: {
                 token: read('token')
