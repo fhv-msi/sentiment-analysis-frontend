@@ -1,11 +1,17 @@
-# deploy to staging
-deploy:
-  provider: heroku
-  api_key: $HEROKU_API_KEY
-  app: fhv-frontend-staging
-
-# deploy to production
-deploy:
-  provider: heroku
-  api_key: $HEROKU_API_KEY
-  app: fhv-frontend
+jobs:
+  include:
+    - stage: deploy to staging
+      script: skip
+      deploy: &heroku
+        provider: heroku
+        app: fhv-frontend-staging
+        api_key: $HEROKU_API_KEY
+    - stage: test staging
+      script: 'curl https://fhv-frontend-staging.herokuapp.com/'
+    - stage: deploy to production
+      script: skip
+      deploy:
+        <<: *heroku
+        app: fhv-frontend
+    - stage: test production
+      script: 'curl https://fhv-frontend.herokuapp.com/'
