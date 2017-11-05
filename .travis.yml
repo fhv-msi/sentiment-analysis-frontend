@@ -1,15 +1,19 @@
 jobs:
   include:
-    - stage: deploy to staging
+    - stage: prepare staging
       script: 'find . -type f -name "*.js" -exec sed -i 's/{{BACKEND_URL}}/fhv-backend-staging.herokuapp.com/g' {} +'
+    - stage: deploy to staging
+      script: skip
       deploy: &heroku
         provider: heroku
         app: fhv-frontend-staging
         api_key: $HEROKU_API_KEY
     - stage: test staging
       script: 'curl https://fhv-frontend-staging.herokuapp.com/'
-    - stage: deploy to production
+    - stage: prepare production
       script: 'find . -type f -name "*.js" -exec sed -i 's/{{BACKEND_URL}}/fhv-backend.herokuapp.com/g' {} +'
+    - stage: deploy to production
+      script: skip
       deploy:
         <<: *heroku
         app: fhv-frontend
