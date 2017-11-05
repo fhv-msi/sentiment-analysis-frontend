@@ -3,7 +3,7 @@ $(function() {
         e.preventDefault(); // disable the default form submit even
 
         $.ajax({
-            url: "http://localhost:8080/login",
+            url: "https://{{BACKEND_URL}}/login",
             type: "POST",
             data: {
                 email: $('#email').val()
@@ -24,7 +24,7 @@ $(function() {
         e.preventDefault(); // disable the default form submit even
 
         $.ajax({
-            url: "http://localhost:8080/logout",
+            url: "http://{{BACKEND_URL}}/logout",
             type: "POST",
             data: {
                 token: read('token')

@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $.ajax({
-        url: "http://localhost:8080/history?token=" + read('token'),
+        url: "http://{{BACKEND_URL}}/history?token=" + read('token'),
         type: "GET",
         success: function (response) {
             response.items.forEach(function (data) {

@@ -11,7 +11,7 @@ $(function() {
         e.preventDefault(); // disable the default form submit event
 
         $.ajax({
-            url: "http://localhost:8080/analyze",
+            url: "http://{{BACKEND_URL}}/analyze",
             type: "POST",
             data: {
                 text: $('#analyzeText').val(),

@@ -1,7 +1,7 @@
 jobs:
   include:
     - stage: deploy to staging
-      script: skip
+      script: 'find . -type f -name "*.js" -exec sed -i 's/{{BACKEND_URL}}/fhv-backend-staging.herokuapp.com/g' {} +'
       deploy: &heroku
         provider: heroku
         app: fhv-frontend-staging
@@ -9,7 +9,7 @@ jobs:
     - stage: test staging
       script: 'curl https://fhv-frontend-staging.herokuapp.com/'
     - stage: deploy to production
-      script: skip
+      script: 'find . -type f -name "*.js" -exec sed -i 's/{{BACKEND_URL}}/fhv-backend.herokuapp.com/g' {} +'
       deploy:
         <<: *heroku
         app: fhv-frontend
