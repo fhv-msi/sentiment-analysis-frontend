@@ -119,8 +119,8 @@
         <!-- Custom scripts for all pages-->
         <script src="js/sb-admin.min.js"></script>
         <script src="js/sessionStorage.js"></script>
-        <script src="js/analyze.js" data-backend="<?php echo getenv('BACKEND_URL');"></script>
-        <script src="js/auth.js" data-backend="<?php echo getenv('BACKEND_URL');"></script>
+        <script src="js/analyze.js" data-backend="<?php echo getenv('BACKEND_URL');?>"></script>
+        <script src="js/auth.js" data-backend="<?php echo getenv('BACKEND_URL');?>"></script>
     </div>
 </body>
 

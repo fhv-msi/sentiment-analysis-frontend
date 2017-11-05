@@ -41,7 +41,7 @@
 <!-- Core plugin JavaScript-->
 <script src="libs/jquery-easing/jquery.easing.min.js"></script>
 <script src="js/sessionStorage.js"></script>
-<script src="js/auth.js" data-backend="<?php echo getenv('BACKEND_URL');"></script>
+<script src="js/auth.js" data-backend="<?php echo getenv('BACKEND_URL');?>"></script>
 </body>
 
 </html>
