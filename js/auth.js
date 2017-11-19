@@ -24,7 +24,7 @@ $(function() {
         e.preventDefault(); // disable the default form submit even
 
         $.ajax({
-            url: "http://" + $('script[src*=auth]').attr('data-backend') +"/logout",
+            url: "https://" + $('script[src*=auth]').attr('data-backend') +"/logout",
             type: "POST",
             data: {
                 token: read('token')
