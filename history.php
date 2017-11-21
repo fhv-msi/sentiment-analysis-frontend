@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="History">
-                <a class="nav-link" href="history.html">
+                <a class="nav-link" href="history.php">
                     <i class="fa fa-fw fa-history"></i>
                     <span class="nav-link-text">History</span>
                 </a>
