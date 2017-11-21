@@ -21,7 +21,7 @@
     <div class="card card-login mx-auto mt-5">
         <div class="card-header">Login</div>
         <div class="card-body">
-            <img src="img/sentiment_logo.png" style="margin-left: 10%;">
+            <img src="img/sentiment_logo.png" style="margin-left: 10%;" id="logo">
             <form>
                 <div class="form-group">
                     <form id="loginForm" onsubmit="return(false);">
