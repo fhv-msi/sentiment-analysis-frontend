@@ -10,6 +10,9 @@ $(function() {
     $('#analyzeBtn').on('click', function (e) {
         e.preventDefault(); // disable the default form submit event
 
+        // disable button until data is loaded
+        $this.button('loading');
+
         $.ajax({
             url: "https://" + $('script[src*=auth]').attr('data-backend') +"/analyze",
             type: "POST",
@@ -31,6 +34,9 @@ $(function() {
             error: function (response) {
                 alert('error loading data');
             },
+            complete: function(data) {
+                $this.button('reset');
+            }
         });
     });
 });
