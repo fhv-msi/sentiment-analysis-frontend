@@ -37,7 +37,7 @@ $(function() {
             },
             complete: function(data) {
                 $('#analyzeBtn').prop("disabled",false);
-                $('#analyzeBtn').html('Loading...');
+                $('#analyzeBtn').html('Analyze');
             }
         });
     });
