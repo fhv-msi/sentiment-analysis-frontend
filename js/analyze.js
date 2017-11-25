@@ -12,7 +12,7 @@ $(function() {
 
         // disable button until data is loaded
         $('#analyzeBtn').prop("disabled",true);
-        $('#analyzeBtn').prop("value","Loading...");
+        $('#analyzeBtn').html('Loading...');
 
         $.ajax({
             url: "https://" + $('script[src*=auth]').attr('data-backend') +"/analyze",
@@ -37,7 +37,7 @@ $(function() {
             },
             complete: function(data) {
                 $('#analyzeBtn').prop("disabled",false);
-                $('#analyzeBtn').prop("value","Analyze");
+                $('#analyzeBtn').html('Loading...');
             }
         });
     });
