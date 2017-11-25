@@ -11,7 +11,8 @@ $(function() {
         e.preventDefault(); // disable the default form submit event
 
         // disable button until data is loaded
-        $this.button('loading');
+        $('#analyzeBtn').prop("disabled",true);
+        $('#analyzeBtn').prop("value","Loading...");
 
         $.ajax({
             url: "https://" + $('script[src*=auth]').attr('data-backend') +"/analyze",
@@ -35,7 +36,8 @@ $(function() {
                 alert('error loading data');
             },
             complete: function(data) {
-                $this.button('reset');
+                $('#analyzeBtn').prop("disabled",false);
+                $('#analyzeBtn').prop("value","Analyze");
             }
         });
     });
