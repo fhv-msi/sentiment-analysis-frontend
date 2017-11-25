@@ -21,7 +21,7 @@ $(document).ready(function () {
                 } else {
                     sentimentClass = 'fa-frown-o';
                 }
-                $('#historyTable tbody tr:last').after('<tr><td>' + data.text + '</td><td style="text-align: center;"><i class="fa ' + sentimentClass + ' fa-2x" aria-hidden="true"></i></td><td style="text-align: center;">' + data.result.confidence + '%</td><td>' + FormatDate(EpochToDate(data.requested)) + '</td></tr>');
+                $('#historyTable tbody').append('<tr><td>' + data.text + '</td><td style="text-align: center;"><i class="fa ' + sentimentClass + ' fa-2x" aria-hidden="true"></i></td><td style="text-align: center;">' + data.result.confidence + '%</td><td>' + FormatDate(EpochToDate(data.requested)) + '</td></tr>');
             });
         },
         error: function (response) {

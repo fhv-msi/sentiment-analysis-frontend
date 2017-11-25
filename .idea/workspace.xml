@@ -28,10 +28,10 @@
         <entry file="file://$PROJECT_DIR$/js/history.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+              <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
               <folding>
-                <marker date="1511630876640" expanded="true" signature="882:901" ph="..." />
-                <marker date="1511630876640" expanded="true" signature="985:1004" ph="..." />
+                <marker date="1511631115331" expanded="true" signature="875:894" ph="..." />
+                <marker date="1511631115331" expanded="true" signature="978:997" ph="..." />
               </folding>
             </state>
           </provider>
@@ -358,12 +358,12 @@
       <workItem from="1511288251329" duration="1260000" />
       <workItem from="1511294439508" duration="1541000" />
       <workItem from="1511602782378" duration="2280000" />
-      <workItem from="1511630824041" duration="80000" />
+      <workItem from="1511630824041" duration="415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31055000" />
+    <option name="totallyTimeSpent" value="31390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -428,8 +428,8 @@
         <state relative-caret-position="170">
           <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
           <folding>
-            <marker date="1511630876640" expanded="true" signature="882:901" ph="..." />
-            <marker date="1511630876640" expanded="true" signature="985:1004" ph="..." />
+            <marker date="1511631115331" expanded="true" signature="875:894" ph="..." />
+            <marker date="1511631115331" expanded="true" signature="978:997" ph="..." />
           </folding>
         </state>
       </provider>
@@ -709,10 +709,10 @@
     <entry file="file://$PROJECT_DIR$/js/history.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
           <folding>
-            <marker date="1511630876640" expanded="true" signature="882:901" ph="..." />
-            <marker date="1511630876640" expanded="true" signature="985:1004" ph="..." />
+            <marker date="1511631115331" expanded="true" signature="875:894" ph="..." />
+            <marker date="1511631115331" expanded="true" signature="978:997" ph="..." />
           </folding>
         </state>
       </provider>
