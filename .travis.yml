@@ -8,14 +8,14 @@ jobs:
         api_key: $HEROKU_API_KEY
     - stage: automatic user acceptance tests on staging
       script:
-        - tar -zxvf geckodriver-v0.19.1-linux64.tar.gz
         - "export DISPLAY=:99.0"
-        - "export webdriver.gecko.driver=$(pwd)/geckodriver"
         - "sh -e /etc/init.d/xvfb start"
         - sleep 3 # give xvfb some time to start
         - cd ..
         - "git clone https://github.com/fhv-msi/sentiment-analysis-tests.git"
         - cd sentiment-analysis-tests
+        - tar -zxvf geckodriver-v0.19.1-linux64.tar.gz        
+        - "export webdriver.gecko.driver=$(pwd)/geckodriver"
         - mvn verify
         - "cd ../sentiment-analysis-frontend"
     - stage: deploy to production
