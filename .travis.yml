@@ -8,6 +8,9 @@ jobs:
         api_key: $HEROKU_API_KEY
     - stage: automatic user acceptance tests on staging
       script:
+        - "export DISPLAY=:99.0"
+        - "sh -e /etc/init.d/xvfb start"
+        - sleep 3 # give xvfb some time to start
         - cd ..
         - "git clone https://github.com/fhv-msi/sentiment-analysis-tests.git"
         - cd sentiment-analysis-tests
