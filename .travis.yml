@@ -15,8 +15,7 @@ jobs:
         - "git clone https://github.com/fhv-msi/sentiment-analysis-tests.git"
         - cd sentiment-analysis-tests
         - tar -zxvf geckodriver-v0.19.1-linux64.tar.gz        
-        - "export webdriver.gecko.driver=$(pwd)/geckodriver"
-        - mvn verify
+        - mvn verify -Dwebdriver.gecko.driver=$(pwd)/geckodriver
         - "cd ../sentiment-analysis-frontend"
     - stage: deploy to production
       script: skip
