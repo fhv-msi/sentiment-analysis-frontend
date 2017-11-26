@@ -7,11 +7,12 @@ jobs:
         app: fhv-frontend-staging
         api_key: $HEROKU_API_KEY
     - stage: automatic user acceptance tests on staging
-      script:
-        - "dbus-uuidgen > /etc/machine-id"
+      language: java
+      before_script:
         - "export DISPLAY=:99.0"
         - "sh -e /etc/init.d/xvfb start"
         - sleep 3 # give xvfb some time to start
+      script:
         - cd ..
         - "git clone https://github.com/fhv-msi/sentiment-analysis-tests.git"
         - cd sentiment-analysis-tests
