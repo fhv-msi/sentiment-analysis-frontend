@@ -12,7 +12,15 @@ jobs:
         - "git clone https://github.com/fhv-msi/sentiment-analysis-tests.git"
         - cd sentiment-analysis-tests
         - mvn verify
-        - "cd ../sentiment-analysis-frontend"
+        - cd ..
+        - "git clone https://github.com/fhv-msi/sentiment-analysis-docs.git"
+        - rm -rf sentiment-analysis-docs/generated/cukedoctor sentiment-analysis-docs/generated/walk_through.mp4
+        - cp sentiment-analysis-tests/target/cukedoctor sentiment-analysis-docs/generated/
+        - cd sentiment-analysis-docs/generated
+        - ../../sentiment-analysis-tests/scripts/download_walk_through_video.py
+        - git add --all
+        - git commit -am "update documentation"
+        - git push
     - stage: deploy to production
       script: skip
       deploy:
