@@ -1,8 +1,7 @@
 jobs:
   include:
     - stage: deploy to staging
-      script:
-        - which python
+      script: skip
       deploy: &heroku
         provider: heroku
         app: fhv-frontend-staging
