@@ -8,6 +8,8 @@ jobs:
         api_key: $HEROKU_API_KEY
     - stage: automatic user acceptance tests on staging
       script:
+        - which python
+        - python --version
         - cd ..
         - "git clone https://github.com/fhv-msi/sentiment-analysis-tests.git"
         - cd sentiment-analysis-tests
